@@ -3,7 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
         <title>Home Page</title>
-        <link rel="stylesheet" href="http://christieseferli.com/expenses/css/styles.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
     </head>
     <body>
         <div id="wrapper">

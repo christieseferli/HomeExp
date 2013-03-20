@@ -4,7 +4,7 @@
         <form name="add" action="index.php?page=add&action=add" method="post">
             Description: <input type="text" name="Description" value="" style="margin-right: 10px;">
             Cost: <input type="text" name="Cost" value="" style="margin-right: 10px;">
-            <div style="margin-top: 15px;margin-right: 299px;">
+            <div style="margin-top: 15px;margin-right: 260px;">
             <input type="checkbox" name="users[<?php echo $_SESSION['Auth']['username']; ?>]" value="1" id="checkbox" checked="checked"/> <label for="check"><?php echo $_SESSION['Auth']['username']; ?></label>
         <?php
             $sql = "SELECT username FROM members WHERE username != '".$_SESSION["Auth"]["username"]."';";
@@ -14,7 +14,7 @@
             }
         ?>
             </div>
-            <input type="submit" value="submit" style="margin-top: 15px;margin-right: 465px;">
+            <input type="submit" value="submit" style="margin-top: 15px;margin-right: 452px;">
         </form>
         </div>
 
