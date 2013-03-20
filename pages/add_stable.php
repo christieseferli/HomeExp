@@ -4,17 +4,17 @@
         <form name="add" action="index.php?page=add&action=add" method="post">
             Description: <input type="text" name="Description" value="" style="margin-right: 10px;">
             Cost: <input type="text" name="Cost" value="" style="margin-right: 10px;">
-            <div style="margin-top: 15px;margin-right: 299px;">
-            <input type="checkbox" name="users[<?php echo $_SESSION['Auth']['username']; ?>]" value="1" id="checkbox" checked="checked"/> <label for="check"><?php echo $_SESSION['Auth']['username']; ?></label>
-        <?php
-            $sql = "SELECT username FROM members WHERE username != '".$_SESSION["Auth"]["username"]."';";
-            $result = mysql_query($sql,$lnk);
-            while ($row = mysql_fetch_assoc($result)){
-                echo '<input type="checkbox" name="users['.$row['username'].']" value="'.$row['username'].'" id="checkbox" ><label for="checkbox">'.$row['username'].'</label>';
-            }
-        ?>
+            <div style="margin-top: 15px;">
+            <input type="checkbox" name="users[thanasis]" value="1" id="checkboxThanasis" <?php if ($_SESSION['Auth']['username'] == 'thanasis') echo 'checked="checked"'; ?> />
+            <label for="checkboxThanasis">Thanasis</label>
+            <input type="checkbox" name="users[christie]" value="1" id="checkboxChristie" <?php if ($_SESSION['Auth']['username'] == 'christie') echo 'checked="checked"'; ?> />
+            <label for="checkboxChristie">Christie</label>
+            <input type="checkbox" name="users[ethan]" value="1" id="checkboxEthan" <?php if ($_SESSION['Auth']['username'] == 'ethan') echo 'checked="checked"'; ?> />
+            <label for="checkboxEthan">Ethan</label>
+            <input type="checkbox" name="users[dora]" value="1" id="checkboxDora" <?php if ($_SESSION['Auth']['username'] == 'dora') echo 'checked="checked"'; ?> />
+            <label for="checkboxDora">Dora</label>
             </div>
-            <input type="submit" value="submit" style="margin-top: 15px;margin-right: 465px;">
+            <input type="submit" value="submit" style="margin-top: 15px;margin-right:-62px;">
         </form>
         </div>
 

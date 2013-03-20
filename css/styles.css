@@ -158,14 +158,14 @@ body{
 #navigation .add span {
   width: 144px;
   height: 80px;
-  background: url(photos/add_hover.png) no-repeat;
+/*  background: url(photos/add_hover.png) no-repeat;*/
   left: 0px;
   top: 0px;
 }
 
 #navigation .weekly {
-  width: 144px;
-  height: 58px;
+  width: 155px;
+  height: 64px;
   background: url(photos/weekly.png) no-repeat;
   left: 230px;
   top: 79px;
@@ -174,14 +174,14 @@ body{
 #navigation .weekly span {
   width: 160px;
   height: 80px;
-  background: url(photos/weekly_hover.png) no-repeat;
+/*  background: url(photos/weekly_hover.png) no-repeat;*/
   left: 0px;
   top: 0px;
 }
 
 #navigation .monthly {
-  width: 144px;
-  height: 58px;
+  width: 164px;
+  height: 66px;
   background: url(photos/monthly.png) no-repeat;
   left: 416px;
   top: 83px;
@@ -190,7 +190,7 @@ body{
 #navigation .monthly span {
   width: 160px;
   height: 80px;
-  background: url(photos/monthly_hover.png) no-repeat;
+/*  background: url(photos/monthly_hover.png) no-repeat;*/
   left: 0px;
   top: 0px;
 }
@@ -206,7 +206,7 @@ body{
 #navigation .calculator span {
   width: 227px;
   height: 80px;
-  background: url(photos/calculator_hover.png) no-repeat;
+/*  background: url(photos/calculator_hover.png) no-repeat;*/
   left: 0px;
   top: 0px;
 }
@@ -349,9 +349,10 @@ text-align: center;
 
 .log{
     font-family: verdana,geneva,arial,helvetica,sans-serif;
-    font-size:16px;
+    font-size:22px;
     font-weight: bold;
     color: #23362B;
+    margin-right:354px;
 }
 
 .title{
@@ -363,6 +364,24 @@ text-align: center;
     display: inline-block;
     font-size: 25px;
     font-weight: bold;
+}
+
+.title_additional{
+    color: #003C00;
+    font-family: verdana,helvetica,arial,sans-serif;
+/*    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;*/
+    margin-bottom: -17px;
+    margin-top: 60px;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.title_additional_txt{
+    font-family: verdana,helvetica,arial,sans-serif;
+    color: #003C00;
+    display: block;
+    margin-bottom: 45px;
 }
 
 .title-calculator{
@@ -418,13 +437,20 @@ margin-left: 165px;
 .table_all_link a {
     display: block;
     text-decoration: none;
-    color: #000000;
+    color: #FF0000;
     font-family: verdana,helvetica,arial,sans-serif;
 }
 
-.table_all_link a:hover{
-    color:red;
+.pay_me a{
+    display: inline;
+    text-decoration: none;
+    color: #FF0000;
+    font-family: verdana,helvetica,arial,sans-serif;
 }
+
+/*.table_all_link a:hover{
+    color:red;
+}*/
 
 #table_calc{
 display: inline-table;
@@ -635,7 +661,6 @@ tbody tr * {padding: 6px;}*/
     float: left;
 
 }
-
 
 #footer{
     color:#23362B;

@@ -1,5 +1,4 @@
 <?php
-
 if (!empty($_POST)) {
     if ($_GET['action'] == 'add') {
         if (!empty($_POST["Description"])&& !empty($_POST["Cost"])){

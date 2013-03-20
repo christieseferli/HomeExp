@@ -27,7 +27,7 @@
     </div>
     <div class="text_dates">
         <?php
-            $sql = "SELECT * FROM payments ORDER BY ID DESC LIMIT 10";
+            $sql = "SELECT * FROM payments ORDER BY ID DESC LIMIT 6";
             $result =  mysql_query($sql);
             echo "<div id='text_past'>";
             echo 'Past Expenses:';
@@ -152,14 +152,13 @@
                     $payment = $last;
                     $balance[$firstUser] = round(-$diff, 2);
                     $balance[$lastUser] = 0;
-                   echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
-
+                    echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;<br />";
                 } elseif ($diff < 0) {
                     $payment = abs($first);
                     $balance[$firstUser] = 0;
                     $balance[$lastUser] = round(-$diff, 2);
-                    echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
-                    }
+                    echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;<br />";
+                }
             }
 
             echo '<br />';
@@ -170,8 +169,11 @@
     <?php if (($count != 0) && (empty($_GET['time']))): ?>
      <div id="button">
         <ul>
-            <li><a href="index.php?page=payment&action=payment" class="calc"><span></span></a></li>
+            <li><a href="index.php?page=payment" class="calc"><span></span></a></li>
         </ul>
      </div>
     <?php endif; ?>
+    <form>
+        <input type="button" value="Print this page" onClick="window.print()"/>
+    </form>
 </div>

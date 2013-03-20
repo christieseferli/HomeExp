@@ -13,7 +13,7 @@
     </div>
     <div id="table">
         <?php
-        $sql = "SELECT * FROM expenses WHERE Username='" . $_SESSION['Auth']['username'] . "' AND Date >= '" . $dbStart . "' AND Date <= '" . $dbEnd . "' ORDER BY ID DESC LIMIT 100";
+        $sql = "SELECT * FROM expenses WHERE Username= '" . $_SESSION['Auth']['username'] . "' AND Date >= '" . $dbStart . "' AND Date <= '" . $dbEnd . "' ORDER BY ID DESC LIMIT 10";
         $result = mysql_query($sql, $lnk);
         echo '<table id="table_all">
         <tr>

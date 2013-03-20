@@ -1,6 +1,7 @@
 <?php include('start.php');?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
         <title>Home Page</title>
         <link rel="stylesheet" href="http://christieseferli.com/expenses/css/styles.css" type="text/css" media="all" />
     </head>
@@ -9,14 +10,16 @@
             <div id="header">
                 <div id="logout">
                     <?php if (!empty($_SESSION['Auth'])):?>
-                            <a href="index.php?page=logout"style="color: #5d5d5d;text-decoration: none;"><?php echo '<img src="css/photos/logout.png" style="position:relative;margin-right:-6px;">' . ' ' . '<span style="font-size:22px;">'. $_SESSION['Auth']['username'].'</span>' ;?></a>
-                    <?php endif;?>
+                            <a href="index.php?page=logout"style="color: #5d5d5d;text-decoration: none;"><?php echo '<img src="css/photos/logOut.png" style="position:relative;margin-right:-6px;">' . ' ' . '<span style="font-size:22px;">'. $_SESSION['Auth']['username'].'</span>' ;?></a>
+                   <?php endif;?>
                 </div>
                 <div id="homeButton">
-                    <?php if (isset($_GET['page']) && $page!='login'):?>
-                            <a href="index.php?page=home"style="display:inline-block;"><img src="css/photos/homeExplogo.png"></a>
+                    <?php if (isset($_GET['page']) && $page!='login' && $page!='register'):?>
+                            <a href="index.php?page=home"style="display:inline-block;"><img src="css/photos/homeEXPlogo.png"></a>
+                    <?php elseif (isset($_GET['page']) && $page == 'register'):?>
+                            <a href="index.php?page=login"style="display:inline-block;"><img src="css/photos/homeEXPlogo.png"></a>
                     <?php else: ?>
-                            <img src="css/photos/homeExplogo.png"></img>
+                            <img src="css/photos/homeEXPlogo.png"></img>
                     <?php endif; ?>
                 </div>
             </div>
