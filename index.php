@@ -1,0 +1,28 @@
+<?php include('start.php');?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="http://christieseferli.com/expenses/css/styles.css" type="text/css" media="all" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div id="logout">
+                    <?php if (!empty($_SESSION['Auth'])):?>
+                            <a href="index.php?page=logout"style="color: #5d5d5d;text-decoration: none;"><?php echo '<img src="css/photos/logout.png" style="position:relative;margin-right:-6px;">' . ' ' . '<span style="font-size:22px;">'. $_SESSION['Auth']['username'].'</span>' ;?></a>
+                    <?php endif;?>
+                </div>
+                <div id="homeButton">
+                    <?php if (isset($_GET['page']) && $page!='login'):?>
+                            <a href="index.php?page=home"style="display:inline-block;"><img src="css/photos/homeExplogo.png"></a>
+                    <?php else: ?>
+                            <img src="css/photos/homeExplogo.png"></img>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <?php if(isset($_GET['page']) && $page!='login' && $page != 'register') include('menu.php');?>
+            <?php include('pages/'.$page.'.php');?>
+            <?php include ('footer.php');?>
+        </div>
+    </body>
+</html>
