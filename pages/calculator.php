@@ -166,3 +166,12 @@
             echo "Total amount spent this week is: &euro; ".number_format($total, 2)."<br />";
             echo '</div>';
      ?>
+     </div>
+    <?php if (($count != 0) && (empty($_GET['time']))): ?>
+     <div id="button">
+        <ul>
+            <li><a href="index.php?page=payment&action=payment" class="calc"><span></span></a></li>
+        </ul>
+     </div>
+    <?php endif; ?>
+</div>
