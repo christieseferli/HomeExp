@@ -2,28 +2,23 @@
     <div class="title-calculator">
         <?php
             if (empty($_GET['time'])) {
-                //Pote egine to teleutaio complete payment?
                 $sql = "SELECT * FROM payments ORDER BY ID DESC LIMIT 1";
                 $result =  mysql_query($sql);
                 $row = mysql_fetch_assoc($result);
-                //Apo to teleytaio complete payment mexri tora
                 $startUnixtimestamp = strtotime($row['Date']);
                 $endUnixtimestamp = time();
             } else {
-                //Pote egine to teleutaio complete payment?
                 $sql = "SELECT * FROM payments WHERE Date < '".date('Y-m-d H:i', $_GET['time'])."' ORDER BY ID DESC LIMIT 1";
                 $result =  mysql_query($sql);
                 $row = mysql_fetch_assoc($result);
-                //Apo to teleytaio complete payment mexri tora
                 $startUnixtimestamp = strtotime($row['Date']);
                 $endUnixtimestamp = $_GET['time'];
             }
-            //Ftiakse imerominies gia database kai gia display
             $dbStart = date('Y-m-d H:i:s', $startUnixtimestamp);
             $dbEnd = date('Y-m-d H:i:s', $endUnixtimestamp);
             $displayStart = date('d/m/Y H:i', $startUnixtimestamp);
             $displayEnd = date('d/m/Y H:i', $endUnixtimestamp);
-            echo 'Check your Expenses from day ' .'<span style="font-size:20px;">'. $displayStart .'</span>'. ' to ' . '<span style="font-size:20px;">'. $displayEnd. '</span>'; ?>
+            echo 'Check your Expenses from day ' .'<span style="font-size:22px;">'. $displayStart .'</span>'. ' to ' . '<span style="font-size:22px;">'. $displayEnd. '</span>'; ?>
     </div>
     <div class="text_dates">
         <?php
@@ -152,19 +147,14 @@
                     $payment = $last;
                     $balance[$firstUser] = round(-$diff, 2);
                     $balance[$lastUser] = 0;
-                   echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
+                   echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
 
                 } elseif ($diff < 0) {
                     $payment = abs($first);
                     $balance[$firstUser] = 0;
                     $balance[$lastUser] = round(-$diff, 2);
-                    echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
+                    echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
                     }
-//           if (($count != 0) && (empty($_GET['time']))){
-//                if ($balance[$firstUser]==0 && $balance[$lastUser] ==0){
-//                include('actions/payment.php');
-//                }
-//                         }
             }
 
             echo '<br />';

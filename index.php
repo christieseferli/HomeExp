@@ -11,7 +11,7 @@
             <div id="header">
                 <div id="logout">
                     <?php if (!empty($_SESSION['Auth'])):?>
-                            <a href="index.php?page=logout"style="color: #5d5d5d;text-decoration: none;"><?php echo '<img src="css/photos/logOut.png" style="position:relative;margin-right:-6px;">' . ' ' . '<span style="font-size:22px;">'. $_SESSION['Auth']['username'].'</span>' ;?></a>
+                            <a href="index.php?page=logout"style="color: #5d5d5d;text-decoration: none;"><?php echo '<span style="font-size:22px;display:block;">LogOut</span>' . ' ' . '<span style="font-size:18px;">'. $_SESSION['Auth']['username'].'</span>' ;?></a>
                    <?php endif;?>
                 </div>
                 <div id="homeButton">

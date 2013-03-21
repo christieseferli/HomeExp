@@ -9,7 +9,7 @@
     $displayStart = date('d/m/Y', $startUnixtimestamp);
     $displayEnd   = date('d/m/Y', $endUnixtimestamp);
 
-    echo 'Check your Weekly Expenses from ' . '<span style="font-size:20px;">'. $displayStart .'</span>'. ' to ' .'<span style="font-size:20px;">'. $displayEnd .'</span>'; ?>
+    echo 'Check your Weekly Expenses from ' . '<span style="font-size:22px;">'. $displayStart .'</span>'. ' to ' .'<span style="font-size:22px;">'. $displayEnd .'</span>'; ?>
     </div>
     <div id="table">
         <?php
@@ -25,7 +25,6 @@
         </tr>';
 
         while ($row = mysql_fetch_assoc($result)) {
-
             echo '<tr>';
             echo '<td>' . $row['ID'] . " " . '</td>';
             echo '<td>' . $row['Username'] . " " . '</td>';
@@ -37,5 +36,4 @@
         echo '</table>';
         ?>
     </div>
-
 </div>

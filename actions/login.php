@@ -28,7 +28,4 @@
       } elseif ($_GET['action'] == 'logout') {
             $_SESSION['Auth'] = false;
         }
-
-
-
 ?>

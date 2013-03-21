@@ -2,9 +2,9 @@
         <h2 class="title"><?php  echo "Check and Add your Home Expenses";?></h2>
         <div id="form">
         <form name="add" action="index.php?page=add&action=add" method="post">
-            Description: <input type="text" name="Description" value="" style="margin-right: 10px;">
-            Cost: <input type="text" name="Cost" value="" style="margin-right: 10px;">
-            <div style="margin-top: 15px;margin-right: 260px;">
+            Description: <input type="text" name="Description" value="" style="margin-right: 10px;background-color: rgb(250, 255, 189);">
+            Cost: <input type="text" name="Cost" value="" style="margin-right: 10px;background-color: rgb(250, 255, 189);">
+            <div style="margin-top: 15px;margin-right: 240px;">
             <input type="checkbox" name="users[<?php echo $_SESSION['Auth']['username']; ?>]" value="1" id="checkbox" checked="checked"/> <label for="check"><?php echo $_SESSION['Auth']['username']; ?></label>
         <?php
             $sql = "SELECT username FROM members WHERE username != '".$_SESSION["Auth"]["username"]."';";
@@ -14,35 +14,28 @@
             }
         ?>
             </div>
-            <input type="submit" value="submit" style="margin-top: 15px;margin-right: 452px;">
+            <input type="submit" value="submit" style="margin-top: 15px;margin-right: 443px;">
         </form>
         </div>
-
         <div class="title-calculator">
         <?php
             if (empty($_GET['time'])) {
-                //Pote egine to teleutaio complete payment?
                 $sql = "SELECT * FROM payments ORDER BY ID DESC LIMIT 1";
                 $result =  mysql_query($sql);
                 $row = mysql_fetch_assoc($result);
-                //Apo to teleytaio complete payment mexri tora
                 $startUnixtimestamp = strtotime($row['Date']);
                 $endUnixtimestamp = time();
             } else {
-                //Pote egine to teleutaio complete payment?
                 $sql = "SELECT * FROM payments WHERE Date < '".date('Y-m-d H:i', $_GET['time'])."' ORDER BY ID DESC LIMIT 1";
                 $result =  mysql_query($sql);
                 $row = mysql_fetch_assoc($result);
-                //Apo to teleytaio complete payment mexri tora
                 $startUnixtimestamp = strtotime($row['Date']);
                 $endUnixtimestamp = $_GET['time'];
             }
-            //Ftiakse imerominies gia database kai gia display
             $dbStart = date('Y-m-d H:i:s', $startUnixtimestamp);
             $dbEnd = date('Y-m-d H:i:s', $endUnixtimestamp);
             $displayStart = date('d/m/Y H:i', $startUnixtimestamp);
             $displayEnd = date('d/m/Y H:i', $endUnixtimestamp);
-
             ?>
     </div>
      <div id="table">
@@ -76,11 +69,10 @@
                 echo '<td>' . $row['Date'] . " " . '</td>';
                 echo '<td>' . $row['Description'] . " " . '</td>';
                 echo '<td>' . $row['Cost'] . " " . '</td>';
-                echo "<td class='table_all_link'>". '<a href="index.php?page=delete&id='.$row['ID'].'">Delete</a>'. '</td>';
+                echo "<td class='table_all_link'>". '<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=delete&id='.$row['ID'].'">Delete</a>'. '</td>';
                 echo '</tr>';
             }
             echo '</table>';
         ?>
-        </div>
-    </div>
-
+     </div>
+</div>

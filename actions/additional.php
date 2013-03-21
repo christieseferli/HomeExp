@@ -26,10 +26,7 @@ if (($_GET['action'] == 'additional') && ($_GET['from'] == $_SESSION['Auth']['us
             $sql = "INSERT INTO expenses_users VALUES ('', '".$expenseId."', '".$_GET['to']."');";
             mysql_query($sql, $lnk);
         }
-
         sendEmail();
     }
-
 }
-
 ?>
