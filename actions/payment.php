@@ -1,5 +1,4 @@
 <?php
-
     $usr = $_SESSION["Auth"]["username"];
     $time = date("H:i",time());
     $date = date('Y-m-d');

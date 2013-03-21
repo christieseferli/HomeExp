@@ -1,5 +1,4 @@
 <?php
-
 function sendEmail(){
     global $lnk;
     $fromUser = $_SESSION['Auth']['email'];
@@ -30,6 +29,7 @@ if (($_GET['action'] == 'additional') && ($_GET['from'] == $_SESSION['Auth']['us
 
         sendEmail();
     }
+
 }
 
 ?>

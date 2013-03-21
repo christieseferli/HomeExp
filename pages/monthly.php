@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
     <div class="title_mly">
     <?php
         if (empty($_GET['showMonth'])) {

@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
     <form action="index.php?page=register&action=register" method="post" id="register">
         <p class="log" style="margin-right: 597px;"> Create a new account</p>
         <label for name="username" style="color: #23362B;font-size: 18px;font-weight: bold;">Username*</label>

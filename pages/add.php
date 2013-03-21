@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
         <h2 class="title"><?php  echo "Check and Add your Home Expenses";?></h2>
         <div id="form">
         <form name="add" action="index.php?page=add&action=add" method="post">

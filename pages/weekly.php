@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
     <div class="title_wly">
     <?php
     $startUnixtimestamp = strtotime('last monday', strtotime('tomorrow'));

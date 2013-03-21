@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
     <h2 class="title">Let's see the Last 10 Expenses</h2>
     <div id="table">
         <?php

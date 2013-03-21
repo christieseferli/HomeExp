@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
     <div class="title-calculator">
         <?php
             if (empty($_GET['time'])) {
@@ -160,6 +160,11 @@
                     $balance[$lastUser] = round(-$diff, 2);
                     echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
                     }
+//           if (($count != 0) && (empty($_GET['time']))){
+//                if ($balance[$firstUser]==0 && $balance[$lastUser] ==0){
+//                include('actions/payment.php');
+//                }
+//                         }
             }
 
             echo '<br />';
@@ -174,4 +179,4 @@
         </ul>
      </div>
     <?php endif; ?>
-</div>
+    </div>

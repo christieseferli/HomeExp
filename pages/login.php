@@ -1,4 +1,4 @@
-<div id="main_content">
+<div class="main_content">
     <div id="msg"> <?php echo $message; ?> </div>
     <div id="form_log">
         <form name="login" action="index.php?page=login&action=login"  method="post">
