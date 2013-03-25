@@ -9,7 +9,6 @@ function sendEmail(){
     $result = mysql_query($sql,$lnk);
     $row_user = mysql_fetch_assoc($result);
     $toUser_email = $row_user['email'];
-
     mail ($toUser_email,
           $subject,
           $message,
@@ -26,10 +25,7 @@ if (($_GET['action'] == 'additional') && ($_GET['from'] == $_SESSION['Auth']['us
             $sql = "INSERT INTO expenses_users VALUES ('', '".$expenseId."', '".$_GET['to']."');";
             mysql_query($sql, $lnk);
         }
-
         sendEmail();
     }
-
 }
-
 ?>

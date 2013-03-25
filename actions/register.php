@@ -48,15 +48,15 @@ if(isset($_POST['formsubmitted'])){
                         'FROM:' . EMAIL
                     );
 
-                echo '<div style="color: rgb(243, 255, 92);background-color: #b4b4b4;">Thank you for registering! A confirmation email has been sent to ' . $email.'. Please click on the Activation Link to Activate your account </div>';
+                echo '<div class="register_msg_suc">Thank you for registering! A confirmation email has been sent to ' . $email.'. Please click on the Activation Link to Activate your account </div>';
             } else {
-                 echo '<div style="color: rgb(243, 255, 92);">You could not be registered due to a system error. We apologize for any inconvenience.</div>';
+                 echo '<div class="register_msg">You could not be registered due to a system error. We apologize for any inconvenience.</div>';
             }
         }else {
-            echo '<div style="color: rgb(243, 255, 92);" >That email address has already been registered.</div>';
+            echo '<div class="register_msg">That email address has already been registered.</div>';
         }
    }else {
-        echo '<div style="color: rgb(243, 255, 92);"> <ol>';
+        echo '<div class="register_msg"> <ol>';
         foreach ($error as $key => $values) {
             echo '<li>' . $values . '</li>';
          }
