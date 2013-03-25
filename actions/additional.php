@@ -9,7 +9,6 @@ function sendEmail(){
     $result = mysql_query($sql,$lnk);
     $row_user = mysql_fetch_assoc($result);
     $toUser_email = $row_user['email'];
-
     mail ($toUser_email,
           $subject,
           $message,

@@ -18,7 +18,7 @@
             $dbEnd = date('Y-m-d H:i:s', $endUnixtimestamp);
             $displayStart = date('d/m/Y H:i', $startUnixtimestamp);
             $displayEnd = date('d/m/Y H:i', $endUnixtimestamp);
-            echo 'Check your Expenses from day ' .'<span style="font-size:22px;">'. $displayStart .'</span>'. ' to ' . '<span style="font-size:22px;">'. $displayEnd. '</span>'; ?>
+            echo 'Check your Expenses <br /> from'.'<span class="calc_date">'.' '. $displayStart .'</span>'. ' to ' . '<span class="calc_date">'. $displayEnd. '</span>'; ?>
     </div>
     <div class="text_dates">
         <?php
@@ -147,16 +147,15 @@
                     $payment = $last;
                     $balance[$firstUser] = round(-$diff, 2);
                     $balance[$lastUser] = 0;
-                   echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
+                    echo '<span class="calc_text">'. $firstUser.'</span>'. " has to pay ". '<span class="calc_text">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span class="calc_text" style="text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
 
                 } elseif ($diff < 0) {
                     $payment = abs($first);
                     $balance[$firstUser] = 0;
                     $balance[$lastUser] = round(-$diff, 2);
-                    echo '<span style="font-size:20px;">'. $firstUser.'</span>'. " has to pay ". '<span style="font-size:20px;">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span style="font-size:20px; text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
+                    echo '<span class="calc_text">'. $firstUser.'</span>'. " has to pay ". '<span class="calc_text">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span class="calc_text" style="text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
                     }
             }
-
             echo '<br />';
             echo "Total amount spent this week is: &euro; ".number_format($total, 2)."<br />";
             echo '</div>';

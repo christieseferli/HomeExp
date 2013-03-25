@@ -19,8 +19,7 @@
         $dbEnd = date('Y-m-d', $endUnixtimestamp);
         $displayStart = date('d/m/Y', $startUnixtimestamp);
         $displayEnd = date('d/m/Y', $endUnixtimestamp);
-
-        echo 'Check your Monthly Expenses from ' .'<span style="font-size:22px;">'. $displayStart .'</span>'. ' to ' . '<span style="font-size:22px;">'. $displayEnd .'</span>';
+        echo 'Check your Monthly Expenses <br />from '.' '.'<span style="font-size:16px;">'. $displayStart .'</span>'. ' to ' . '<span style="font-size:16px;">'. $displayEnd .'</span>';
     ?>
     </div>
     <div id="navigation_months">
@@ -51,7 +50,6 @@
                     <th>Description</th>
                     <th>Cost</th>
                     </tr>';
-
                 while ($row = mysql_fetch_array($result)) {
                     echo '<tr>';
                     echo '<td>' . $row['ID'] . " " . '</td>';

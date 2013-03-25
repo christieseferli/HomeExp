@@ -27,67 +27,6 @@ body{
     height:102px;
 }
 
-#navigation ul {
-    background:url("photos/menu-bg.gif") top left repeat-x;
-    height:43px;
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-
-#navigation li{
-    float:left;
-    padding:0px 8px 0px 8px;
-}
-
-#navigation li a{
-    color:#666666;
-    display:block;
-    font-weight:bold;
-    line-height:43px;
-    padding:0px 25px;
-    text-align:center;
-    text-decoration:none;
-}
-
-#navigation li a:hover{
-    color:#000000;
-    text-decoration:none;
-}
-
-#navigation li ul{
-    background:#e0e0e0;
-    border-left:2px solid #fce10e;
-    border-right:2px solid #fce10e;
-    border-bottom:2px solid #fce10e;
-    display:none;
-    height:auto;
-    filter:alpha(opacity=95);
-    opacity:0.95;
-    position:absolute;
-    width:225px;
-    z-index:200;
-    top:1em;
-    left:0;
-}
-
-#navigation li:hover ul{
-    display: block;
-}
-
-#navigation p{
-    clear:left;
-}
-
-#navigation .active > a{
-    background:url("photos/current-bg.gif") top left repeat-x;
-    color:#00B1E6;
-}
-
-#navigation .active > a:hover {
-    color: #00B1E6;
-}
-
 #navigation{
     display: inline-block;
     margin-top:-30px;
@@ -305,6 +244,73 @@ input{
     margin-right:354px;
 }
 
+.log_scr{
+    font-size: 15px;
+    color: rgb(99, 105, 22);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.label_log{
+    color: #23362B;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fields_log{
+    background-color: rgb(250, 255, 189);
+}
+
+.submit_log{
+    margin-right: -492px;
+}
+
+.log_reg{
+    font-family: verdana,geneva,arial,helvetica,sans-serif;
+    font-size:22px;
+    font-weight: bold;
+    color: #23362B;
+    margin-right: 597px;
+}
+
+.label_reg{
+    color: #23362B;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fields_reg{
+    background-color: rgb(250, 255, 189);
+}
+
+.submit_reg{
+    margin-left: 751px;
+}
+
+.register_msg_suc{
+    color: rgb(243, 255, 92);
+    background-color: #b4b4b4;
+}
+
+.register_msg{
+    color: rgb(243, 255, 92);
+}
+
+.fields_add{
+    margin-right: 10px;
+    background-color: rgb(250, 255, 189);
+}
+
+.users_add{
+    margin-top: 15px;
+    margin-right: 180px;
+}
+
+.submit_add{
+    margin-top: 15px;
+    margin-right: 457px;
+}
+
 .title{
     color: #003C00;
     font-family: verdana,helvetica,arial,sans-serif;
@@ -390,6 +396,14 @@ margin-left: 165px;
     text-decoration: none;
     color: #FF0000;
     font-family: verdana,helvetica,arial,sans-serif;
+}
+
+.calc_text{
+    font-size:20px;
+}
+
+.calc_date{
+    font-size:16px;
 }
 
 #table_calc{
@@ -570,4 +584,10 @@ margin-left: 165px;
     font-size:12px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.footer_scr{
+    display:inline-block;
+    margin-right: 8px;
+    margin-bottom: 1px;
 }

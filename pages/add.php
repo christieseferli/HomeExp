@@ -2,9 +2,9 @@
         <h2 class="title"><?php  echo "Check and Add your Home Expenses";?></h2>
         <div id="form">
         <form name="add" action="index.php?page=add&action=add" method="post">
-            Description: <input type="text" name="Description" value="" style="margin-right: 10px;background-color: rgb(250, 255, 189);">
-            Cost: <input type="text" name="Cost" value="" style="margin-right: 10px;background-color: rgb(250, 255, 189);">
-            <div style="margin-top: 15px;margin-right: 240px;">
+            Description: <input type="text" name="Description" value="" class="fields_add">
+            Cost: <input type="text" name="Cost" value="" class="fields_add">
+            <div class="users_add">
             <input type="checkbox" name="users[<?php echo $_SESSION['Auth']['username']; ?>]" value="1" id="checkbox" checked="checked"/> <label for="check"><?php echo $_SESSION['Auth']['username']; ?></label>
         <?php
             $sql = "SELECT username FROM members WHERE username != '".$_SESSION["Auth"]["username"]."';";
@@ -14,7 +14,7 @@
             }
         ?>
             </div>
-            <input type="submit" value="submit" style="margin-top: 15px;margin-right: 443px;">
+            <input type="submit" value="add" class="submit_add">
         </form>
         </div>
         <div class="title-calculator">
@@ -53,7 +53,6 @@
                     <th>Cost</th>
                     <th> </th>
                     </tr>';
-
             while ($row = mysql_fetch_array($result)) {
                 $count ++;
                 $sqlUsers = "SELECT * FROM expenses_users WHERE expense_id = ".$row['ID'].";";
