@@ -235,7 +235,7 @@ input{
     border-bottom:2px solid #23362B;
     text-align: center;
 }
-<<<<<<< HEAD
+
 
 .log{
     font-family: verdana,geneva,arial,helvetica,sans-serif;
@@ -266,38 +266,6 @@ input{
     margin-right: -492px;
 }
 
-=======
-
-.log{
-    font-family: verdana,geneva,arial,helvetica,sans-serif;
-    font-size:22px;
-    font-weight: bold;
-    color: #23362B;
-    margin-right:354px;
-}
-
-.log_scr{
-    font-size: 15px;
-    color: rgb(99, 105, 22);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.label_log{
-    color: #23362B;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.fields_log{
-    background-color: rgb(250, 255, 189);
-}
-
-.submit_log{
-    margin-right: -492px;
-}
-
->>>>>>> 8172cb136e045c9258b8794776b0e78eb45c986f
 .log_reg{
     font-family: verdana,geneva,arial,helvetica,sans-serif;
     font-size:22px;
@@ -336,20 +304,12 @@ input{
 
 .users_add{
     margin-top: 15px;
-<<<<<<< HEAD
     margin-right: 233px;
-=======
-    margin-right: 180px;
->>>>>>> 8172cb136e045c9258b8794776b0e78eb45c986f
 }
 
 .submit_add{
     margin-top: 15px;
-<<<<<<< HEAD
     margin-right: 476px;
-=======
-    margin-right: 457px;
->>>>>>> 8172cb136e045c9258b8794776b0e78eb45c986f
 }
 
 .title{
@@ -357,11 +317,7 @@ input{
     font-family: verdana,helvetica,arial,sans-serif;
     margin-bottom: 50px;
     margin-top: 60px;
-<<<<<<< HEAD
     display: block;
-=======
-    display: inline-block;
->>>>>>> 8172cb136e045c9258b8794776b0e78eb45c986f
     font-size: 20px;
     font-weight: bold;
 }
@@ -417,7 +373,6 @@ input{
 }
 
 #table_all {
-<<<<<<< HEAD
     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
     display: inline-table;
@@ -428,18 +383,6 @@ input{
     width:737px;
     display: inline-table;
     margin-left: 165px;
-=======
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-width: 100%;
-display: inline-table;
-}
-
-#table_all_calc {
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-width:737px;
-display: inline-table;
-margin-left: 165px;
->>>>>>> 8172cb136e045c9258b8794776b0e78eb45c986f
 }
 
 .table_all_link a {
