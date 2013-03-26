@@ -148,10 +148,6 @@
                     $balance[$firstUser] = round(-$diff, 2);
                     $balance[$lastUser] = 0;
                     echo '<span class="calc_text">'. $firstUser.'</span>'. " has to pay ". '<span class="calc_text">'.number_format($payment, 2)."&euro;". '</span>'." ". "to ".'<span class="calc_text" style="text-decoration:underline;">'.$lastUser.'</span>'.". New balance: ".number_format($balance[$firstUser], 2)."&euro;"."   "."<span class='pay_me'>".'<a onclick="return confirm(\'Are you sure?\');" href="index.php?page=additional&action=additional&from='.$firstUser.'&to='. $lastUser.'&amount='.number_format($payment, 2).'">'."pay me".'</a>'."</span>"."<br />";
-<<<<<<< HEAD
-=======
-
->>>>>>> 8172cb136e045c9258b8794776b0e78eb45c986f
                 } elseif ($diff < 0) {
                     $payment = abs($first);
                     $balance[$firstUser] = 0;
