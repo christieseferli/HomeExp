@@ -6,7 +6,7 @@
     mysql_select_db("christieseferli_db");
     mysql_set_charset('utf8', $lnk);
     define('EMAIL','christieseferli@gmail.com');
-    define('WEBSITE_URL','http://www.christieseferli.com/expenses');
+    define('WEBSITE_URL','http://www.christieseferli.com/homeexpdev');
     $page = 'home';
     if (isset($_GET['page']) && file_exists('pages/'.$_GET['page'].'.php')) {
         $page = $_GET['page'];

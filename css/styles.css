@@ -372,16 +372,16 @@ input{
 }
 
 #table_all {
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-width: 100%;
-display: inline-table;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: inline-table;
 }
 
 #table_all_calc {
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-width:737px;
-display: inline-table;
-margin-left: 165px;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:737px;
+    display: inline-table;
+    margin-left: 165px;
 }
 
 .table_all_link a {
