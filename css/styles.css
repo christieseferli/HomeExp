@@ -27,6 +27,17 @@ body{
     height:102px;
 }
 
+.shoplist{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #23362B;
+    background-color: #F0F0F0;
+    width: 127px;
+    padding: 10px;
+    margin-left: 15px;
+}
+
 #navigation{
     display: inline-block;
     margin-top:-30px;
@@ -222,7 +233,16 @@ img{
     color: #003C00;
     font-weight: bold;
     display: inline-block;
+}
 
+#form_edit{
+    text-align:center;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    color: #003C00;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: -115px;
 }
 
 input{
@@ -312,6 +332,11 @@ input{
     margin-right: 476px;
 }
 
+.edit{
+    font-size: 11px;
+    text-decoration: none;
+}
+
 .title{
     color: #003C00;
     font-family: verdana,helvetica,arial,sans-serif;
@@ -372,6 +397,13 @@ input{
     font-family: verdana,helvetica,arial,sans-serif;
 }
 
+#table_edit {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 200px;
+    margin-right: 458px;
+    display: inline-table;
+}
+
 #table_all {
     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
@@ -422,6 +454,12 @@ input{
     padding:3px 7px 2px 7px;
 }
 
+#table_edit td,th{
+    font-size:1em;
+    border:1px solid #A9A9A9;
+    padding:3px 7px 2px 7px;
+}
+
 #table_all_calc td,th{
     font-size:1em;
     border:1px solid #A9A9A9;
@@ -435,6 +473,15 @@ input{
 }
 
 #table_all th{
+    font-size:1.1em;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#F5F5DC;
+    color:#000000;
+}
+
+#table_edit th{
     font-size:1.1em;
     text-align:center;
     padding-top:5px;
@@ -565,11 +612,11 @@ input{
     display: inline-block;
     float: right;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 20px;
     font-family: verdana,geneva,arial,helvetica,sans-serif;
     font-weight: bold;
-    background-color: #F0F0F0;
+/*    background-color: #F0F0F0;*/
 }
 
 #homeButton{

@@ -1,3 +1,5 @@
+<div><a class="shoplist" href="index.php?page=shoplist">Super Market List</a></div>
+
 <div id="navigation">
     <ul>
         <li><a href="index.php?page=add" class="add">Add<span></span></a></li>
