@@ -335,6 +335,9 @@ input{
 .edit{
     font-size: 11px;
     text-decoration: none;
+    color: #FF0000;
+    display: inline;
+    float: right;
 }
 
 .title{
