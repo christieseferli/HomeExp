@@ -328,8 +328,7 @@ input{
 }
 
 .submit_add{
-    margin-top: 15px;
-    margin-right: 476px;
+    display: inline;
 }
 
 .edit{
@@ -625,6 +624,32 @@ input{
 #homeButton{
     display: inline-block;
     float: left;
+}
+
+.styled-select select {
+    background: transparent;
+    width: 155px;
+    padding: 3px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 25px;
+    -webkit-appearance: none;
+   }
+
+.styled-select {
+    display: inline-block;
+    margin-right: 10px;
+    width: 154px;
+    height: 25px;
+    overflow: hidden;
+    background: url(photos/down_arrow_select.jpg) no-repeat right rgb(250, 255, 189);
+    border-top: 2px solid #8e8e8e;
+    border-left: 2px solid #8e8e8e;
+    border-right: 2px solid #23362B;
+    border-bottom: 2px solid #23362B;
+    margin-bottom: 100px;
 }
 
 #footer{
