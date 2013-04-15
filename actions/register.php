@@ -5,7 +5,12 @@ if(isset($_POST['formsubmitted'])){
     if(empty($_POST['username'])){
         $error[] = 'Please enter a username';
     }else{
-        $username = $_POST['username'];
+        if (!ereg('[^A-Za-z0-9]',$_POST['username'])) {
+           $username = $_POST['username'];
+        }else{
+          $error[] = 'Your username is invalid';
+      }
+        //$username = $_POST['username'];
     }
     if(empty($_POST['email'])){
         $error[] = 'Please enter a mail';
@@ -19,10 +24,12 @@ if(isset($_POST['formsubmitted'])){
     if (empty($_POST['password'])){
         $error[] = 'Please enter a password';
     }else{
-
         $password = md5($_POST['password']);
     }
     if (empty($error)){
+
+        $username_fail = "SELECT username FROM members WHERE username = '".$_POST['username']."'";
+        $result_username = mysql_query($username_fail,$lnk);
 
         $verify_email = "SELECT * FROM members WHERE email = '$email'";
         $result_verify_email = mysql_query($verify_email,$lnk);
@@ -30,7 +37,7 @@ if(isset($_POST['formsubmitted'])){
             echo 'Database error';
         }
 
-        if (mysql_fetch_assoc($result_verify_email) == 0){
+        if ((mysql_fetch_assoc($result_verify_email) == 0) && (mysql_num_rows($result_username) == 0)){
             $activationCode = md5(uniqid(rand(),true));
             $insert_users = "INSERT INTO members VALUES ('','".$username."','".$email."','".$password."','".$activationCode."',0)";
             $result_insert_users = mysql_query($insert_users,$lnk);
@@ -52,8 +59,8 @@ if(isset($_POST['formsubmitted'])){
             } else {
                  echo '<div class="register_msg">You could not be registered due to a system error. We apologize for any inconvenience.</div>';
             }
-        }else {
-            echo '<div class="register_msg">That email address has already been registered.</div>';
+        }else{
+            echo '<div class="register_msg">That email address or username has already been registered.</div>';
         }
    }else {
         echo '<div class="register_msg"> <ol>';
