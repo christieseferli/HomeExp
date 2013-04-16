@@ -2,9 +2,7 @@
     session_start();
     date_default_timezone_set('Europe/Amsterdam');
     header('Content-Type: text/html; charset=utf-8');
-    $lnk = mysql_connect('localhost', 'christieseferli', 'S3f3rl1@@');
-    mysql_select_db("christieseferli_db");
-    mysql_set_charset('utf8', $lnk);
+    include('db.php');
     define('EMAIL','christieseferli@gmail.com');
     define('WEBSITE_URL','http://www.christieseferli.com/homeexpdev');
     $page = 'home';
