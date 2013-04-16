@@ -1,0 +1,50 @@
+/*body {
+  background: white;
+  font-size: 12pt;
+ }
+
+#navigation{
+     display: none;
+}
+
+#wrapper, .main_content {
+ width: auto;
+ border: 0;
+ margin: 0 5%;
+ padding: 0;
+ float: none !important;
+color: black;
+ background: transparent;
+ }
+
+.main_content{
+     margin-left: 10%;
+}
+
+a:link, a:visited {
+ color: #520;
+ background: transparent;
+ font-weight: bold;
+ text-decoration: underline;
+ }
+
+.main_content a:link:after, .main_content a:visited:after {
+   content: " (" attr(href) ") ";
+   font-size: 90%;
+   }
+
+.main_content a[href^="/"]:after {
+  content: " (http://www.alistapart.com" attr(href) ") ";
+   }
+
+div.main_content {
+ margin-left: 10%;
+ padding-top: 1em;
+ border-top: 1px solid #930;
+ }
+
+ div#mast {
+ margin-bottom: -8px;
+ }div#mast img {
+ vertical-align: bottom;
+ }*/
