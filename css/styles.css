@@ -628,7 +628,7 @@ input{
 
 .styled-select select {
     background: transparent;
-    width: 155px;
+    width: 190px;
     padding: 3px;
     font-size: 16px;
     line-height: 1;
@@ -641,7 +641,7 @@ input{
 .styled-select {
     display: inline-block;
     margin-right: 10px;
-    width: 154px;
+    width: 190px;
     height: 25px;
     overflow: hidden;
     background: url(photos/down_arrow_select.jpg) no-repeat right rgb(250, 255, 189);

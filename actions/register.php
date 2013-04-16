@@ -5,7 +5,7 @@ if(isset($_POST['formsubmitted'])){
     if(empty($_POST['username'])){
         $error[] = 'Please enter a username';
     }else{
-        if (!ereg('[^A-Za-z0-9]',$_POST['username'])) {
+        if (!ereg('[^A-Za-z0-9.]',$_POST['username'])) {
            $username = $_POST['username'];
         }else{
           $error[] = 'Your username is invalid';
