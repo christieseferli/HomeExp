@@ -1,5 +1,5 @@
 <?php
-    $lnk = mysql_connect('localhost', 'christieseferli', 'S3f3rl1@@');
-    mysql_select_db("christieseferli_db");
+    $lnk = mysql_connect('localhost', $settings['db_username'], $settings['db_password']);
+    mysql_select_db($settings['db_name']);
     mysql_set_charset('utf8', $lnk);
 ?>
