@@ -245,7 +245,7 @@ img{
     margin-right: -115px;
 }
 
-input{
+/*input{
     border-radius: 13px 15px 15px 15px;
     -moz-border-radius: 13px 15px 15px 15px;
     -webkit-border-radius: 0px 0px 0px 0px;
@@ -254,7 +254,7 @@ input{
     border-right:2px solid #23362B;
     border-bottom:2px solid #23362B;
     text-align: center;
-}
+}*/
 
 
 .log{
@@ -262,7 +262,7 @@ input{
     font-size:22px;
     font-weight: bold;
     color: #23362B;
-    margin-right:354px;
+    margin-bottom:25px;
 }
 
 .log_scr{
@@ -291,7 +291,7 @@ input{
     font-size:22px;
     font-weight: bold;
     color: #23362B;
-    margin-right: 597px;
+    margin-bottom: -19px;
 }
 
 .label_reg{
@@ -666,4 +666,92 @@ input{
     display:inline-block;
     margin-right: 8px;
     margin-bottom: 1px;
+}
+
+.reg_form{
+    display: block;
+    margin-right: 512px;
+}
+
+@font-face {
+    font-family: 'CandaraRegular';
+    src: url('fonts/candara-webfont.eot');
+    src: url('fonts/candara-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/candara-webfont.woff') format('woff'),
+         url('fonts/candara-webfont.ttf') format('truetype'),
+         url('fonts/candara-webfont.svg#CandaraRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+input{
+	border:0;
+	outline:0;
+	text-align:center;
+	color:#999999;
+	margin-bottom:10px;
+}
+#box{
+	background:url(photos/shape.png) no-repeat center;
+	margin:0px auto 0 auto;
+	width:360px;
+	height:382px;
+}
+#box_log{
+	background:url(photos/shape.png) no-repeat center;
+	margin:0px auto 0 auto;
+	width:360px;
+	height:257px;
+}
+.elements{
+	width:222px;
+	margin:0 auto;
+	padding:10px 0;
+}
+.elements_log{
+	width:222px;
+	margin:0 auto;
+	padding:20px 0;
+}
+.avatar{
+/*	background:url(photos/avatar.gif) no-repeat center;*/
+	height:65px;
+	margin-bottom:15px;
+}
+.username{
+	background:url(photos/usermamefield.gif) no-repeat top;
+	width:222px;
+	height:32px;
+}
+.username:focus{
+	background:url(photos/usermamefield.gif) no-repeat bottom;
+	color:#333333;
+}
+.password{
+	background:url(photos/passwordfield.gif) no-repeat top;
+	width:222px;
+	height:32px;
+	text-align:center;
+}
+.password:focus{
+	background:url(photos/passwordfield.gif) no-repeat bottom;
+	color:#333333;
+}
+
+.submit{
+	float:right;
+	background:#cccccc;
+	width:60px;
+	height:23px;
+	border-radius:5px;
+	border-bottom:2px solid #bcbcbc;
+	cursor:pointer;
+	color:#fff;
+}
+.submit:hover{
+	text-shadow:0 1px rgba(0,0,0,0.1);
+}
+.submit:active{
+	text-shadow:0 -1px rgba(0,0,0,0.2);
 }

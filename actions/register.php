@@ -26,7 +26,14 @@ if(isset($_POST['formsubmitted'])){
     }else{
         $password = md5($_POST['password']);
     }
+    if (empty($_POST['confirm_password'])) {
+                $error[] = 'Please Enter Your Password again';
+            } else {
+                 $confirm_password = md5($_POST['confirm_password']);
+            }
+    }
     if (empty($error)){
+        if($password == $confirm_password){
 
         $username_fail = "SELECT username FROM members WHERE username = '".$_POST['username']."'";
         $result_username = mysql_query($username_fail,$lnk);
@@ -38,8 +45,9 @@ if(isset($_POST['formsubmitted'])){
         }
 
         if ((mysql_fetch_assoc($result_verify_email) == 0) && (mysql_num_rows($result_username) == 0)){
+
             $activationCode = md5(uniqid(rand(),true));
-            $insert_users = "INSERT INTO members VALUES ('','".$username."','".$email."','".$password."','".$activationCode."',0)";
+            $insert_users = "INSERT INTO members VALUES ('','".$username."','".$email."','".$password."','".$confirm_password."','".$activationCode."',0)";
             $result_insert_users = mysql_query($insert_users,$lnk);
             if(!$result_insert_users){
                 echo 'Database error';
@@ -58,7 +66,7 @@ if(isset($_POST['formsubmitted'])){
                 echo '<div class="register_msg_suc">Thank you for registering! A confirmation email has been sent to ' . $email.'. Please click on the Activation Link to Activate your account </div>';
             } else {
                  echo '<div class="register_msg">You could not be registered due to a system error. We apologize for any inconvenience.</div>';
-            }
+              }
         }else{
             echo '<div class="register_msg">That email address or username has already been registered.</div>';
         }
@@ -69,6 +77,10 @@ if(isset($_POST['formsubmitted'])){
          }
         echo '</ol></div>';
     }
+
+    }else{
+        echo '<div class="register_msg">Please enter the password corectly.</div>';
+    }
 }
-}
+
 ?>
