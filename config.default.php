@@ -8,7 +8,7 @@ $config = array(
         'db_password' => 'password',
         'db_name' => 'database_name',
         'site_url' => 'http://www.web-site-url.tld',
-        'admin_email' => 'christieseferli@gmail.com',
+        'admin_email' => 'username@domain.tld',
         'timezone' => 'Europe/Amsterdam',
     ),
     'production' => array(
@@ -16,7 +16,7 @@ $config = array(
         'db_password' => 'password',
         'db_name' => 'database_name',
         'site_url' => 'http://www.web-site-url.tld',
-        'admin_email' => 'christieseferli@gmail.com',
+        'admin_email' => 'username@domain.tld',
         'timezone' => 'Europe/Amsterdam',
     ),
 );
