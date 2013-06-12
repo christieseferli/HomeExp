@@ -1,10 +1,11 @@
 <?php
     session_start();
-    date_default_timezone_set('Europe/Amsterdam');
+    date_default_timezone_set($settings['timezone']);
     header('Content-Type: text/html; charset=utf-8');
+    include('config.php');
     include('settings.php');
     include('db.php');
-    define('EMAIL','christieseferli@gmail.com');
+    define('EMAIL',$settings['admin_email']);
     define('WEBSITE_URL',$settings['site_url']);
     $page = 'home';
     if (isset($_GET['page']) && file_exists('pages/'.$_GET['page'].'.php')) {
